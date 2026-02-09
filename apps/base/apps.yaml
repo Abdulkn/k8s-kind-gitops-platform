@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: users
-        image: localhost:5000/users:1.0
+        image: localhost:8080/users:1.0
         ports: [{ containerPort: 80 }]
         readinessProbe:
           httpGet: { path: /healthz, port: 80 }
@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
       - name: orders
-        image: localhost:5000/orders:1.0
+        image: localhost:8080/orders:1.0
         ports: [{ containerPort: 80 }]
         readinessProbe:
           httpGet: { path: /healthz, port: 80 }
@@ -84,7 +84,7 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: localhost:5000/gateway:1.0
+        image: localhost:8080/gateway:1.0
         ports: [{ containerPort: 80 }]
         readinessProbe:
           httpGet: { path: /healthz, port: 80 }
